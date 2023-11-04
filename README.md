@@ -24,6 +24,13 @@ This repository holds material of python django training.
 ### What is Virtual Env and How to create it.
 - 
 
+### Django URLs and Views Topics
+
+- Adding a new url.
+- Redirecting url.
+- dynamic path segments url.
+- reverse method use for URLs.
+
 ### Django Templates Topics
 
 - Adding and setup templates.
