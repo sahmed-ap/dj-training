@@ -11,11 +11,15 @@ This repository holds material of python django training.
     - object-oriented programming basic.
 
 - **Django Framework**
-    - Virtual env for django project.
-    - Setup and understand django folder structure.
-    - URLs, Routes and Views.
-    - Templates and static files.
-    - Data, models and relationships.
-    - Forms and ORM.
-    - Type of Views (Function Views, Class based Views)
-    - Django Admin overview.
+  - Virtual env for django project.
+  - Setup and understand django folder structure.
+  - URLs, Routes and Views.
+  - Templates and static files.
+  - Data, models and relationships.
+  - Forms and ORM.
+  - Type of Views (Function Views, Class based Views)
+  - Django Admin overview.
+
+---------
+### What is Virtual Env and How to create it.
+- 
