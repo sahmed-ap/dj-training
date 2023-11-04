@@ -23,3 +23,15 @@ This repository holds material of python django training.
 ---------
 ### What is Virtual Env and How to create it.
 - 
+
+### Django Templates Topics
+
+- Adding and setup templates.
+- Rendering a templates through view.
+- Passing variables to template from view.
+- Template filters
+- Template Tag - For tag | If tag etc
+- Dynamic url tag
+- Templates inheritance.
+- Templates include.
+- Adding static files (CSS) and settings.
