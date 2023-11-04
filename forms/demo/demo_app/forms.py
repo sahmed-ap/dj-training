@@ -1,4 +1,4 @@
-# import the standard Django Forms 
+# import the standard Django forms
 # from built-in library 
 from django import forms
 from django.forms import ModelForm
