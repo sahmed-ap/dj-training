@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container my-4">
+        <div class="row" style="text-align: center">
+            <div class="col">
+                <h2>{{ action }}</h2>
+                {% if form.title.errors %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ form.title.errors | capfirst }}
+                    </div>
+                {% endif %}
+
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Submit</button>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <h2>{{ article.title | title }}</h2>
+    <img style="object-fit: contain" src="{% static 'media/president-article.webp' %}" class="card-img-top"
+         alt="Alt text" width="500" height="500">
+
+    <p> Author Name: <b>{{ article.author }}</b></p>
+    <p>Published at: <h4>{{ article.published }}</h4></p>
+    <p>{{ article.body }}</p>
+{% endblock %}

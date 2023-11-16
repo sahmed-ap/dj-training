@@ -1,0 +1,40 @@
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+    <!-- Navbar content -->
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'home-page' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page"
+                       href="{% url 'hub_page' hub_name='world' %}">World</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'hub_page' hub_name='politics' %}">Politics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'hub_page' hub_name='business' %}">Business</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'hub_page' hub_name='tech' %}">Tech</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page"
+                       href="{% url 'hub_page' hub_name='sports' %}">Sports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'hub_page' hub_name='science' %}">Science</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page"
+                       href="{% url 'hub_page' hub_name='health' %}">Health</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'article-page-create' %}">Create
+                        Article</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
