@@ -12,17 +12,19 @@ from articles.models import Article
 
 
 def render_article_page(request, article_slug):
+    articles = Article.objects.filter(author=User.objects.filter(username=request.user.username).first())
+
+    result_article = next(item for item in articles if item.slug == article_slug)
     article_data = {
-        "title": "Business News",
-        "author": "Biden",
-        "published": datetime.datetime.now().strftime('%d/%m/%Y, %H:%M:%S'),
-        "body": "WASHINGTON (AP) — It was a meeting a year in the making.President Joe Biden and Chinese President Xi Jinping sat down together on Wednesday just outside of San Francisco, where Asian leaders gathered for an annual summit. It was almost exactly one year since their last encounter in Bali, Indonesia, on the sidelines of another global gathering.In addition to a formal bilateral meeting, Biden and Xi shared a lunch with top advisers and strolled the verdant grounds of the luxury estate where their meeting took place."
+        "title": result_article.title,
+        "author": result_article.author.username,
+        "published": result_article.published.strftime('%d/%m/%Y, %H:%M:%S'),
+        "body": result_article.body
     }
     return render(request, "index.html", {"article": article_data, "article_slug": article_slug})
 
 
 def create_article(request):
-    print("Request recieved")
     if request.method == 'POST':
         form = ArticlePostForm(request.POST)
         if form.is_valid():
@@ -45,7 +47,7 @@ def view_my_articles(request):
         articles = Article.objects.filter(author=author)
         for article in articles:
             all_articles.append({"title": article.title, "body": article.body, "slug": article.slug, "published": article.published})
-    return render(request, 'home.html', {'articles': all_articles})   
+    return render(request, 'my_articles.html', {'articles': all_articles})   
 
 def update_article_instance(list_of_dicts, article_slug, updated_data):
     for item in list_of_dicts:
@@ -73,6 +75,13 @@ def update_article(request, article_slug):
         "author": request.user.username,
         })
     return render(request, 'create.html', {'form': form, 'action': 'Update a Article'})
+
+
+def update_delete(request, article_slug):
+    articles = Article.objects.filter(author=User.objects.filter(username=request.user.username).first())
+    result_article = next(item for item in articles if item.slug == article_slug)
+    result_article.delete()
+    return HttpResponseRedirect('/article/my-articles') 
 
 
 def signup_view(request):
