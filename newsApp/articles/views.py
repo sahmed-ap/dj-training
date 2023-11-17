@@ -92,10 +92,11 @@ def complete_signup(request):
     form = SigunupForm(request.POST)
     if form.is_valid():
         user = User.objects.filter(username=request.POST.get("username")).first() 
-        if not user: 
-            user = User.objects.filter(email=request.POST.get("email")).first() 
+        if user: 
+            return render(request, 'signup.html', {'form': form, 'error': 'Username Already Exists'})
+        user = User.objects.filter(email=request.POST.get("email")).first() 
         if user:
-            return HttpResponse(status=400)
+            return render(request, 'signup.html', {'form': form, 'error': 'Email Already Exists'})
         user = User(username = request.POST.get("username"), email = request.POST.get("email"))
         user.set_password(request.POST.get("password"))
         user.save()
@@ -132,4 +133,4 @@ def complete_login(request):
                 # If the user is not valid, show an error message
                 messages.error(request, 'Invalid login credentials.')
 
-        return render(request, 'login.html', {'form': form})
+        return render(request, 'login.html', {'form': form, 'error': 'Username or password is not correct'})

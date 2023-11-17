@@ -14,12 +14,12 @@ class ArticlePostForm(forms.Form):
 
 
 class SigunupForm(forms.Form):
-    username = forms.CharField(max_length=50)
-    email = forms.EmailField()
-    password = forms.CharField(widget=forms.PasswordInput())
+    username = forms.CharField(max_length=50, required=True)
+    email = forms.EmailField(required=True)
+    password = forms.CharField(widget=forms.PasswordInput(), required=True)
     
 class LoginForm(forms.Form):
-    username = forms.CharField(max_length=50)
-    password = forms.CharField(widget=forms.PasswordInput())
+    username = forms.CharField(max_length=50, required=True)
+    password = forms.CharField(widget=forms.PasswordInput(), required=True)
     
     
