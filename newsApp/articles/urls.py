@@ -10,6 +10,7 @@ urlpatterns = [
     path("my-articles", views.view_my_articles, name="my-articles"),
     path("update/<str:article_slug>", views.update_article, name="article-page-update"),
     path("delete/<str:article_slug>", views.update_delete, name="article-page-delete"),
+    path("logout", views.logout_view, name="logout"),
     path("<str:article_slug>", views.render_article_page, name="article-page"),
     
 ]

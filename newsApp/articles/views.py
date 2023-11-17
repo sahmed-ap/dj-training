@@ -5,7 +5,7 @@ from articles.forms import ArticlePostForm, SigunupForm, LoginForm
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from articles.models import Article
 # Create your views here.
@@ -32,7 +32,7 @@ def create_article(request):
             if author:
                 article = Article(author=author, title=form.data.get('title'), body=form.data.get('body'),  published=datetime.datetime.now(), slug=form.data.get('title') + '-' + request.user.username)
                 article.save()            
-            return HttpResponseRedirect('/')  # Replace with your success URL
+            return HttpResponseRedirect('/article/my-articles')  # Replace with your success URL
     else:
         form = ArticlePostForm()
     if request.user.is_authenticated:
@@ -99,13 +99,18 @@ def complete_signup(request):
         user = User(username = request.POST.get("username"), email = request.POST.get("email"))
         user.set_password(request.POST.get("password"))
         user.save()
-        login(request)
-        return HttpResponseRedirect('/') 
+        login(request, user)
+        return HttpResponseRedirect('/article/my-articles') 
     
 
 def login_view(request):
     form = LoginForm()
     return render(request, 'login.html', {'form': form})
+
+def logout_view(request):
+    print("Log out request received")
+    logout(request)
+    return HttpResponseRedirect("/")
 
 def complete_login(request):
     form = LoginForm(request.POST)
@@ -122,7 +127,7 @@ def complete_login(request):
                 login(request, user)
                 messages.success(request, 'Login successful!')
                 print("Login successful")
-                return HttpResponseRedirect('/')  # Redirect to the home page or any other page you want
+                return HttpResponseRedirect('/article/my-articles')  # Redirect to the home page or any other page you want
             else:
                 # If the user is not valid, show an error message
                 messages.error(request, 'Invalid login credentials.')
