@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+    <div class="row justify-content-evenly gy-3 py-4">
+        {% for article in articles %}
+            <div class="col-4">
+                <div class="card">
+                    <img src="{% static 'media/new-york.jpg' %}" class="card-img-top" alt="Alt text" width="200"
+                         height="250">
+                    <div class="card-body">
+                        <h4><a href="{% url 'article-page' article_slug=article.slug %}"> {{ article.title }} </a></h4>
+                        <p class="card-text">{{ article.body | truncatechars:150 }}</p>
+                        <b>{{ article.author }}</b>
+                        <b>{{ article.published }}</b>
+                        <p>
+                            <button><a href="{% url 'article-page-update' article_slug=article.slug %}"> Update </a>
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
