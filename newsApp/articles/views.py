@@ -109,7 +109,6 @@ def login_view(request):
     return render(request, 'login.html', {'form': form})
 
 def logout_view(request):
-    print("Log out request received")
     logout(request)
     return HttpResponseRedirect("/")
 
@@ -119,7 +118,6 @@ def complete_login(request):
         if request.method == 'POST':
             username = request.POST['username']
             password = request.POST['password']
-            print("username", username, "password", password)
             # Use the authenticate method to check if the user's credentials are valid
             user = authenticate(request, username=username, password=password)
 
@@ -127,7 +125,6 @@ def complete_login(request):
                 # If the user is valid, log them in
                 login(request, user)
                 messages.success(request, 'Login successful!')
-                print("Login successful")
                 return HttpResponseRedirect('/article/my-articles')  # Redirect to the home page or any other page you want
             else:
                 # If the user is not valid, show an error message
