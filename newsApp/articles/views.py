@@ -12,7 +12,7 @@ from articles.models import Article
 
 
 def render_article_page(request, article_slug):
-    articles = Article.objects.filter(author=User.objects.filter(username=request.user.username).first())
+    articles = Article.objects.all()
 
     result_article = next(item for item in articles if item.slug == article_slug)
     article_data = {
