@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     "home",
     "articles",
     "hubs",
+    "api",
+    "rest_framework"
 ]
 
 MIDDLEWARE = [
