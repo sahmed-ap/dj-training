@@ -1,4 +1,4 @@
-# Django - The Practical Guide
+# Django -- The Practical Guide
 
 This repository holds material of python django training.
 
