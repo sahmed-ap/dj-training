@@ -1,72 +1,86 @@
 [
-  {
-    "slug": "Business News-Biden testing name",
-    "title": "Business News",
-    "author": "Biden testing name",
-    "published": "today",
-    "body": "President Joe Biden met with Chinese President Xi Jinping for hours on Wednesday in a widely anticipated encounter intended to recalibrate tensions between the two countries."
-  },
-  {
-    "slug": "World News wadjhadkjahwdjkhawjkdhwajkdhawkjdhwakjdhwajkdhawjkdhawjkdhakjwhdawkjhrejkawhdjkwahdjkwhdj-Biden",
-    "title": "World News wadjhadkjahwdjkhawjkdhwajkdhawkjdhwakjdhwajkdhawjkdhawjkdhakjwhdawkjhrejkawhdjkwahdjkwhdj",
-    "author": "Biden",
-    "published": "today",
-    "body": "President Joe Biden met with Chinese President Xi Jinping for hours on Wednesday in a widely anticipated encounter intended to recalibrate tensions between the two countries."
-  },
-  {
-    "slug": "president-joe-biden",
-    "title": "Tech News",
-    "author": "Biden",
-    "published": "today",
-    "body": "President Joe Biden met with Chinese President Xi Jinping for hours on Wednesday in a widely anticipated encounter intended to recalibrate tensions between the two countries."
-  },
-  {
-    "slug": "president-joe-biden",
-    "title": "Sports News",
-    "author": "Biden",
-    "published": "today",
-    "body": "President Joe Biden met with Chinese President Xi Jinping for hours on Wednesday in a widely anticipated encounter intended to recalibrate tensions between the two countries."
-  },
-  {
-    "slug": "president-joe-biden",
-    "title": "Politics News",
-    "author": "Biden",
-    "published": "today",
-    "body": "President Joe Biden met with Chinese President Xi Jinping for hours on Wednesday in a widely anticipated encounter intended to recalibrate tensions between the two countries."
-  },
-  {
-    "slug": "president-joe-biden-1",
-    "title": "Health News",
-    "author": "Biden",
-    "published": "today",
-    "body": "President Joe Biden met with Chinese President Xi Jinping for hours on Wednesday in a widely anticipated encounter intended to recalibrate tensions between the two countries."
-  },
-  {
-    "title": "Testing article creation",
-    "author": "SA",
-    "body": "fakldjwklad",
-    "slug": "Testing article creation-SA",
-    "published": "today"
-  },
-  {
-    "title": "Test article 1234",
-    "author": "SA",
-    "body": "eafjef fskejfelksjf slkgjfeskfjek",
-    "slug": "Test article 1234-SA",
-    "published": "today"
-  },
-  {
-    "title": "Test ar898",
-    "author": "SA 1",
-    "body": "dkvjsklv skjlvjdsklv",
-    "slug": "Test ar898-SA 1",
-    "published": "today"
-  },
-  {
-    "title": "testing w3rkw3jr",
-    "author": "Sa",
-    "body": "edawd",
-    "slug": "testing w3rkw3jr-Sa",
-    "published": "today"
-  }
+    {
+        "slug": "Business News-Biden testing name",
+        "title": "Business News",
+        "author": "Biden testing name",
+        "published": "today",
+        "body": "President Joe Biden met with Chinese President Xi Jinping for hours on Wednesday in a widely anticipated encounter intended to recalibrate tensions between the two countries."
+    },
+    {
+        "slug": "World News wadjhadkjahwdjkhawjkdhwajkdhawkjdhwakjdhwajkdhawjkdhawjkdhakjwhdawkjhrejkawhdjkwahdjkwhdj-Biden",
+        "title": "World News wadjhadkjahwdjkhawjkdhwajkdhawkjdhwakjdhwajkdhawjkdhawjkdhakjwhdawkjhrejkawhdjkwahdjkwhdj",
+        "author": "Biden",
+        "published": "today",
+        "body": "President Joe Biden met with Chinese President Xi Jinping for hours on Wednesday in a widely anticipated encounter intended to recalibrate tensions between the two countries."
+    },
+    {
+        "slug": "president-joe-biden",
+        "title": "Tech News",
+        "author": "Biden",
+        "published": "today",
+        "body": "President Joe Biden met with Chinese President Xi Jinping for hours on Wednesday in a widely anticipated encounter intended to recalibrate tensions between the two countries."
+    },
+    {
+        "slug": "president-joe-biden",
+        "title": "Sports News",
+        "author": "Biden",
+        "published": "today",
+        "body": "President Joe Biden met with Chinese President Xi Jinping for hours on Wednesday in a widely anticipated encounter intended to recalibrate tensions between the two countries."
+    },
+    {
+        "slug": "president-joe-biden",
+        "title": "Politics News",
+        "author": "Biden",
+        "published": "today",
+        "body": "President Joe Biden met with Chinese President Xi Jinping for hours on Wednesday in a widely anticipated encounter intended to recalibrate tensions between the two countries."
+    },
+    {
+        "slug": "president-joe-biden-1",
+        "title": "Health News",
+        "author": "Biden",
+        "published": "today",
+        "body": "President Joe Biden met with Chinese President Xi Jinping for hours on Wednesday in a widely anticipated encounter intended to recalibrate tensions between the two countries."
+    },
+    {
+        "title": "Testing article creation",
+        "author": "SA",
+        "body": "fakldjwklad",
+        "slug": "Testing article creation-SA",
+        "published": "today"
+    },
+    {
+        "title": "Test article 1234",
+        "author": "SA",
+        "body": "eafjef fskejfelksjf slkgjfeskfjek",
+        "slug": "Test article 1234-SA",
+        "published": "today"
+    },
+    {
+        "title": "Test ar898",
+        "author": "SA 1",
+        "body": "dkvjsklv skjlvjdsklv",
+        "slug": "Test ar898-SA 1",
+        "published": "today"
+    },
+    {
+        "title": "testing w3rkw3jr",
+        "author": "Sa",
+        "body": "edawd",
+        "slug": "testing w3rkw3jr-Sa",
+        "published": "today"
+    },
+    {
+        "title": "Hello",
+        "author": "Afi ",
+        "body": "My First Article",
+        "slug": "Hello-Afi ",
+        "published": "today"
+    },
+    {
+        "title": "My Second Article",
+        "author": "afi",
+        "body": "hello",
+        "slug": "My Second Article-afi",
+        "published": "today"
+    }
 ]

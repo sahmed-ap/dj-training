@@ -30,11 +30,34 @@
                     <a class="nav-link active" aria-current="page"
                        href="{% url 'hub_page' hub_name='health' %}">Health</a>
                 </li>
+            </ul>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav ">
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Hi, {{ user.username}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/article/my-articles">My
+                        Articles</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{% url 'article-page-create' %}">Create
                         Article</a>
                 </li>
-            </ul>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/article/logout">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item ">
+                    <a class="nav-link active" aria-current="page" href="/article/login">Login</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link active" aria-current="page" href="/article/signup">Signup</a>
+                </li>
+                {% endif %}
+                </ul>
+            </div>
         </div>
     </div>
 </nav>
